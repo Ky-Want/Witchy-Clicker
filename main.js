@@ -19,7 +19,7 @@ const workers = [
   }
 ]
 
-let gold = 10000
+let gold = 0
 let clickCount = 1
 let autoCount = 0
 
@@ -166,4 +166,4 @@ function passiveIncome() {
 }
 
 
-setInterval(passiveIncome, 1000)
+setInterval(passiveIncome, 5000)

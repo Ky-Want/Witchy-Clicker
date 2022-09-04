@@ -77,6 +77,14 @@
   padding: 5rem;
 }
 
+.dell {
+  height: 15rem;
+  width: 17rem;
+  background-image: url('https://64.media.tumblr.com/b519c5f4e5d3c4648c0a50e3a4317a73/f592abb5d34fa304-f0/s500x750/af9e5d445a6f6e2ca24c5b8745a9322422e68f73.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* #endregion */
 
 
