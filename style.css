@@ -1,0 +1,118 @@
+:root {
+  --primary: white;
+}
+
+
+/* #region: background images */
+.backgroundImg {
+  background-image: url('https://wallpaperset.com/w/full/5/3/0/487372.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cosmic-bg {
+  background-image: url('https://wallpaperaccess.com/full/19922.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 1rem;
+}
+
+.dark-bg {
+  background-image: url('butterfly.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* #endregion */
+
+
+/* #region: cauldron */
+.witch-cauldron {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cauldron {
+  user-select: none;
+  cursor: pointer;
+}
+
+/* #endregion */
+
+
+/* #region: clickCount, gold, upgradesCount */
+.topCounterBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.clickCount {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+}
+
+.gold {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+}
+
+.upgradesCount {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+}
+
+/* #endregion */
+
+
+/* #region: workers */
+.workers {
+  justify-content: space-around;
+  padding: 5rem;
+}
+
+/* #endregion */
+
+
+/* #region: footer stuff */
+.footContainer {
+  padding-top: 5rem;
+}
+
+.clickerUpgradeButton {
+  width: 5rem;
+  border-radius: .5rem;
+}
+
+.clickerAutoBox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.upgrades {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.autoUpgrades {
+  width: 5rem;
+  border-radius: .5rem;
+}
+
+.goldcoin {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* #endregion */
+
+
+.hidden {
+  display: none;
+}
