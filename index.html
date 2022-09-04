@@ -60,10 +60,7 @@
 
             <p>Income: +<span id="daveIncome">0</span> gold/second</p>
 
-            <p class="">Level Up Price: <span id="daveLevelPrice">0</span> gold</p>
-
-            <!-- <button id="davePurchaseButton" onclick="buyWorker('Dave')" class="hidden border" style="user-select: none;
-          cursor: pointer;">Purchase: 10 gold</button> -->
+            <p class="">Level Up Price: <span id="daveLevelPrice">10</span> gold</p>
 
             <button id="daveLevelButton" class=" border" onclick="levelDave('Dave')">Level Up:
               <span id="DaveLevel">0</span></button>
@@ -79,10 +76,7 @@
 
             <p>Income: +<span id="zedIncome">0</span> gold/second</p>
 
-            <p class="">Level Up Price: <span id="zedLevelPrice">0</span> gold</p>
-
-            <!-- <button id="zedPurchaseButton" onclick="buyWorker('Zed')" class="hidden border" style="user-select: none;
-                  cursor: pointer;">Purchase: <span id="zedPurchase">20</span> gold</button> -->
+            <p class="">Level Up Price: <span id="zedLevelPrice">20</span> gold</p>
 
             <button id="zedLevelButton" class=" border" onclick="levelZed('Zed')">Level Up:
               <span id="ZedLevel">0</span></button>
@@ -98,10 +92,7 @@
 
             <p>Income: +<span id="maryIncome">0 </span>gold/second</p>
 
-            <p class="">Level Up Price: <span id="maryLevelPrice">0</span> gold</p>
-
-            <!-- <button id="maryPurchaseButton" onclick="buyWorker('Mary')" class="hidden border" style="user-select: none;
-                 cursor: pointer;">Purchase: <span id="maryPurchase">50</span> gold</button> -->
+            <p class="">Level Up Price: <span id="maryLevelPrice">30</span> gold</p>
 
             <button id="maryLevelButton" class=" border" onclick="levelMary('Mary')">Level Up:
               <span id="MaryLevel">0</span></button>
@@ -204,7 +195,7 @@
           <div class="d-flex">
             <button class="autoUpgrades" onclick="automaticUpgrade1()"><img src="goldcoin.png" alt="gold coin"
                 class="img-fluid goldcoin">
-              <strong><span id="autoUpgradePrice">200</span></strong>
+              <strong><span id="autoUpgradePrice1">200</span></strong>
             </button>
             <p id="autoUpgrade" class="text-light"><strong> Train workers (+1 gold/second)</strong></p>
           </div>
@@ -214,10 +205,10 @@
           <div class="d-flex">
             <button class="autoUpgrades" onclick="automaticUpgrade2()"><img src="goldcoin.png" alt="gold coin"
                 class="img-fluid goldcoin">
-              <strong><span id="autoUpgradePrice">500</span></strong>
+              <strong><span id="autoUpgradePrice2">500</span></strong>
             </button>
-            <p id="autoUpgrade2" class="text-light"><strong> Time warp (gain passive income every second for 10
-                seconds)</strong></p>
+            <p id="autoUpgrade2" class="text-light"><strong> Time warp (Double amount of passive income gained)</strong>
+            </p>
           </div>
 
         </div>
