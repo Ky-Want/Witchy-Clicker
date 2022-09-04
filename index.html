@@ -58,9 +58,9 @@
             <p>Name: Dave</p>
             <p>Job: Forager</p>
 
-            <p>Income: +<span id="daveIncome">1 </span>gold/second</p>
+            <p>Income: +<span id="daveIncome">0</span> gold/second</p>
 
-            <p class="">Level Up Price: <span id="daveLevelPrice">20</span> gold</p>
+            <p class="">Level Up Price: <span id="daveLevelPrice">0</span> gold</p>
 
             <!-- <button id="davePurchaseButton" onclick="buyWorker('Dave')" class="hidden border" style="user-select: none;
           cursor: pointer;">Purchase: 10 gold</button> -->
@@ -77,9 +77,9 @@
             <p>Name: Zed</p>
             <p>Job: Alchemist</p>
 
-            <p>Income: +<span id="zedIncome">2 </span>gold/second</p>
+            <p>Income: +<span id="zedIncome">0</span> gold/second</p>
 
-            <p class="">Level Up Price: <span id="zedLevelPrice">35</span> gold</p>
+            <p class="">Level Up Price: <span id="zedLevelPrice">0</span> gold</p>
 
             <!-- <button id="zedPurchaseButton" onclick="buyWorker('Zed')" class="hidden border" style="user-select: none;
                   cursor: pointer;">Purchase: <span id="zedPurchase">20</span> gold</button> -->
@@ -96,9 +96,9 @@
             <p>Name: Mary</p>
             <p>Job: Monster Hunter</p>
 
-            <p>Income: +<span id="maryIncome">3 </span>gold/second</p>
+            <p>Income: +<span id="maryIncome">0 </span>gold/second</p>
 
-            <p class="">Level Up Price: <span id="maryLevelPrice">100</span> gold</p>
+            <p class="">Level Up Price: <span id="maryLevelPrice">0</span> gold</p>
 
             <!-- <button id="maryPurchaseButton" onclick="buyWorker('Mary')" class="hidden border" style="user-select: none;
                  cursor: pointer;">Purchase: <span id="maryPurchase">50</span> gold</button> -->
@@ -145,7 +145,7 @@
 
         <!-- clicker -->
         <div class="clickCount">+
-          <span id="clickCount" class="fs-4"><strong>1</strong></span>
+          <strong><span id="clickCount" class="fs-4">1</span></strong>
           <img src="cursor.png" alt="cursor clicking image" class="img-fluid">
         </div>
 
@@ -153,14 +153,14 @@
         <!-- gold -->
         <div class="gold">
           <img src="coins.png" alt="stacked gold coins" class="img-fluid">
-          <span id="totalGold" class="fs-4"><strong>0</strong></span>
+          <strong><span id="totalGold" class="fs-4">0</span></strong>
         </div>
 
 
         <!-- upgrades bonus -->
         <div class="upgradesCount">
           <img src="hourglass.png" alt="hourglass image" class="img-fluid">+
-          <span id="autoCount" class="fs-4"><strong>0</strong></span>
+          <strong><span id="autoCount" class="fs-4">0</span></strong>
         </div>
       </div>
     </section>
@@ -178,8 +178,9 @@
         <div class="text-light">
 
           <div class="d-flex">
-            <button class="clickerUpgradeButton"><img src="goldcoin.png" alt="gold coin" class="img-fluid goldcoin">
-              <strong><span id="clickerUpgradePrice">50</span></strong>
+            <button class="clickerUpgradeButton" onclick="clickerUpgrade()"><img src="goldcoin.png" alt="gold coin"
+                class="img-fluid goldcoin">
+              <strong><span id="clickerUpgrade1">50</span></strong>
             </button>
             <p id="clickUpgrade" class="text-light"><strong> Buy better ingredients (+1 gold/click)</strong></p>
           </div>
@@ -187,8 +188,9 @@
           <p></p>
 
           <div class="d-flex">
-            <button class="clickerUpgradeButton"><img src="goldcoin.png" alt="gold coin" class="img-fluid goldcoin">
-              <strong><span id="clickerUpgradePrice">100</span></strong>
+            <button class="clickerUpgradeButton" onclick="clickerUpgrade2()"><img src="goldcoin.png" alt="gold coin"
+                class="img-fluid goldcoin">
+              <strong><span id="clickerUpgrade2">100</span></strong>
             </button>
             <p id="clickUpgrade2" class="text-light"><strong> Improve potion making equipment (Clicker is twice as
                 effective)</strong></p>
@@ -200,7 +202,8 @@
         <!-- automatic upgrades -->
         <div class="text-light">
           <div class="d-flex">
-            <button class="autoUpgrades"><img src="goldcoin.png" alt="gold coin" class="img-fluid goldcoin">
+            <button class="autoUpgrades" onclick="automaticUpgrade1()"><img src="goldcoin.png" alt="gold coin"
+                class="img-fluid goldcoin">
               <strong><span id="autoUpgradePrice">200</span></strong>
             </button>
             <p id="autoUpgrade" class="text-light"><strong> Train workers (+1 gold/second)</strong></p>
@@ -209,11 +212,12 @@
           <p></p>
 
           <div class="d-flex">
-            <button class="autoUpgrades"><img src="goldcoin.png" alt="gold coin" class="img-fluid goldcoin">
+            <button class="autoUpgrades" onclick="automaticUpgrade2()"><img src="goldcoin.png" alt="gold coin"
+                class="img-fluid goldcoin">
               <strong><span id="autoUpgradePrice">500</span></strong>
             </button>
-            <p id="autoUpgrade2" class="text-light"><strong> Time warp (Speed up passive income by 1
-                second)</strong></p>
+            <p id="autoUpgrade2" class="text-light"><strong> Time warp (gain passive income every second for 10
+                seconds)</strong></p>
           </div>
 
         </div>

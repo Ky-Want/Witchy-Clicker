@@ -1,14 +1,5 @@
 // Plan:
 /*
-*Create tools that increase how much is earned when you click (must have at least 1 click upgrade)
-
-*Also make upgrades for the workers (must be at least 4 upgrades)
--Display the quantity of each upgrade user has purchased
-
-*Purchasing upgrades decreases current funds
-
-*When an upgrade is purchased the price increases
-
 *Each upgrade has different modifier values and prices
 */
 
@@ -16,24 +7,32 @@ const workers = [
   {
     name: 'Dave',
     level: 0,
-    price: 10,
-    income: 1
+    price: 0,
+    income: 0
   },
   {
     name: 'Zed',
     level: 0,
-    price: 30,
-    income: 2
+    price: 0,
+    income: 0
   },
   {
     name: 'Mary',
     level: 0,
-    price: 50,
-    income: 3
+    price: 0,
+    income: 0
   }
 ]
 
-let gold = 555
+let gold = 1249
+let clickCount = 1
+let autoCount = 0
+
+let autoUpgrade1 = 200
+let autoUpgrade2 = 500
+
+let clickUpgrade1 = 50
+let clickUpgrade2 = 100
 
 
 
@@ -48,9 +47,6 @@ let gold = 555
 
 function levelDave() {
   const worker = workers.find(w => w.name == 'Dave')
-  document.getElementById('DaveLevel').innerText = worker.level.toString()
-  document.getElementById('daveLevelPrice').innerText = worker.price.toString()
-  document.getElementById('daveIncome').innerText = worker.income.toString()
 
   if (worker.price <= gold) {
     gold -= worker.price
@@ -60,31 +56,27 @@ function levelDave() {
   }
   update()
 }
+
 function levelZed() {
   const worker = workers.find(w => w.name == 'Zed')
-  document.getElementById('ZedLevel').innerText = worker.level.toString()
-  document.getElementById('zedLevelPrice').innerText = worker.price.toString()
-  document.getElementById('zedIncome').innerText = worker.income.toString()
 
   if (gold > worker.price) {
     gold -= worker.price
     worker.level++
     worker.price += 20
-    worker.income += 1
+    worker.income += 2
   }
   update()
 }
+
 function levelMary() {
   const worker = workers.find(w => w.name == 'Mary')
-  document.getElementById('MaryLevel').innerText = worker.level.toString()
-  document.getElementById('maryLevelPrice').innerHTML = worker.price.toString()
-  document.getElementById('maryIncome').innerText = worker.income.toString()
 
   if (gold > worker.price) {
     gold -= worker.price
     worker.level++
     worker.price += 30
-    worker.income += 1
+    worker.income += 3
   }
   update()
 }
@@ -93,31 +85,47 @@ function levelMary() {
 
 
 
-function hourglass() {
-  const worker = workers.find(w => w.name == 'Dave')
-
-  document.getElementById('autoCount').innerText
-  document.getElementById('autoUpgrade').innerText
-  document.getElementById('autoUpgrade2').innerText
-
-  if (2 >= worker.income) {
-
+function clickerUpgrade() {
+  if (clickUpgrade1 <= gold) {
+    gold -= clickUpgrade1
+    clickUpgrade1++
+    clickCount++
+  }
+  update()
+}
+function clickerUpgrade2() {
+  if (clickUpgrade2 <= gold) {
+    gold -= clickUpgrade2
+    clickUpgrade2++
+    clickCount *= 2
   }
   update()
 }
 
 
-function clicker() {
-  const worker = workers.find(w => w.name == 'Dave')
 
-  document.getElementById('clickCount').innerText
-  document.getElementById('clickUpgrade').innerText
-  document.getElementById('clickUpgrade2').innerText
 
+function automaticUpgrade1() {
+  if (autoUpgrade1 <= gold) {
+    gold -= autoUpgrade1
+    autoUpgrade1++
+    autoCount++
+  }
 
   update()
 }
 
+
+function automaticUpgrade2() {
+  if (autoUpgrade2 <= gold) {
+    gold -= autoUpgrade2
+    autoUpgrade2++
+    autoCount == 1
+    autoCount *= 2
+  }
+
+  update()
+}
 
 
 
@@ -125,20 +133,36 @@ function clicker() {
 
 
 function clickCauldron() {
-  gold++
+  gold += clickCount
   update()
 }
 
 
-
 function update() {
-  document.getElementById('totalGold').innerText = gold.toString()
+  const dave = workers.find(w => w.name == 'Dave')
+  const zed = workers.find(w => w.name == 'Zed')
+  const mary = workers.find(w => w.name == 'Mary')
+
+  document.getElementById('totalGold').innerHTML = gold.toString()
+
+  document.getElementById('DaveLevel').innerText = dave.level.toString()
+  document.getElementById('daveLevelPrice').innerText = dave.price.toString()
+  document.getElementById('daveIncome').innerText = dave.income.toString()
+
+  document.getElementById('ZedLevel').innerText = zed.level.toString()
+  document.getElementById('zedLevelPrice').innerText = zed.price.toString()
+  document.getElementById('zedIncome').innerText = zed.income.toString()
+
+  document.getElementById('MaryLevel').innerText = mary.level.toString()
+  document.getElementById('maryLevelPrice').innerHTML = mary.price.toString()
+  document.getElementById('maryIncome').innerText = mary.income.toString()
+
+  document.getElementById('autoCount').innerHTML = autoCount.toString()
+  document.getElementById('clickCount').innerHTML = clickCount.toString()
+  document.getElementById('clickerUpgrade2').innerHTML = clickUpgrade2.toString()
+  document.getElementById('clickerUpgrade1').innerHTML = clickUpgrade1.toString()
 }
 
 
 
-
-levelDave()
-levelMary()
-levelZed()
 
