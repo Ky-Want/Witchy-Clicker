@@ -127,7 +127,6 @@ function clickCauldron() {
   update()
 }
 
-
 function update() {
   const dave = workers.find(w => w.name == 'Dave')
   const zed = workers.find(w => w.name == 'Zed')
@@ -157,3 +156,14 @@ function update() {
 
 
 
+
+function passiveIncome() {
+  console.log('passive income');
+  if (1 <= autoCount) {
+    gold += autoCount
+  }
+  update()
+}
+
+
+setInterval(passiveIncome, 1000)
