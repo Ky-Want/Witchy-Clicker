@@ -96,9 +96,9 @@ function levelMary() {
 function hourglass() {
   const worker = workers.find(w => w.name == 'Dave')
 
-  document.getElementById('autoCount')
-  document.getElementById('autoUpgrade')
-  document.getElementById('autoUpgrade2')
+  document.getElementById('autoCount').innerText
+  document.getElementById('autoUpgrade').innerText
+  document.getElementById('autoUpgrade2').innerText
 
   if (2 >= worker.income) {
 
@@ -111,7 +111,7 @@ function clicker() {
   const worker = workers.find(w => w.name == 'Dave')
 
   document.getElementById('clickCount').innerText
-  document.getElementById('clickUpgrade').innerHTML
+  document.getElementById('clickUpgrade').innerText
   document.getElementById('clickUpgrade2').innerText
 
 
