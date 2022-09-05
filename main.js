@@ -80,7 +80,7 @@ function levelMary() {
 function clickerUpgrade() {
   if (clickUpgrade1 <= gold) {
     gold -= clickUpgrade1
-    clickUpgrade1++
+    clickUpgrade1 += 20
     clickCount++
   }
   update()
@@ -89,7 +89,7 @@ function clickerUpgrade() {
 function clickerUpgrade2() {
   if (clickUpgrade2 <= gold) {
     gold -= clickUpgrade2
-    clickUpgrade2++
+    clickUpgrade2 += 50
     clickCount *= 2
   }
   update()
@@ -103,7 +103,7 @@ function automaticUpgrade1() {
     gold -= autoUpgrade1
     autoUpgrade1++
     autoCount++
-    autoUpgradePrice1++
+    autoUpgradePrice1 += 500
   }
   update()
 }
@@ -113,7 +113,7 @@ function automaticUpgrade2() {
     gold -= autoUpgrade2
     autoUpgrade2++
     autoCount *= 2
-    autoUpgradePrice2++
+    autoUpgradePrice2 += 1000
   }
   update()
 }
