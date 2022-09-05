@@ -20,7 +20,7 @@
 }
 
 .dark-bg {
-  background-image: url('butterfly.jpg');
+  background-image: url('https://img.wallpapersafari.com/desktop/1920/1080/10/63/9enofj.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -78,11 +78,33 @@
 }
 
 .dell {
-  height: 15rem;
-  width: 17rem;
-  background-image: url('https://64.media.tumblr.com/b519c5f4e5d3c4648c0a50e3a4317a73/f592abb5d34fa304-f0/s500x750/af9e5d445a6f6e2ca24c5b8745a9322422e68f73.jpg');
+  height: 20rem;
+  width: 24rem;
+  border-radius: .5rem;
+  background-image: url('https://dspncdn.com/a1/media/692x/d4/66/11/d46611838c489ff3b7b05bcf6a32567a.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 1rem;
+}
+
+.zed {
+  height: 20rem;
+  width: 24rem;
+  border-radius: .5rem;
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/747/484/969/artwork-fantasy-art-steampunk-room-laboratories-hd-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+}
+
+.kain {
+  height: 20rem;
+  width: 24rem;
+  border-radius: .5rem;
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/868/607/668/fantasy-cthulhu-man-sea-monster-hd-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
 }
 
 /* #endregion */

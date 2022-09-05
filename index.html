@@ -49,18 +49,18 @@
 
   <main class="container">
     <!-- SECTION: workers -->
-    <section class="row text-light">
+    <section class="row">
       <div class="d-flex workers">
 
-        <!-- FORAGER, Dell -->
-        <div class="p-3 dell border">
-          <strong>
+        <!-- HERBALIST, Dell -->
+        <div class="dell text-light">
+          <strong class="fs-3">
             <p>Name: Dell</p>
-            <p>Job: Forager</p>
+            <p>Job: Herbalist</p>
 
             <p>Income: +<span id="daveIncome">0</span> gold/second</p>
 
-            <p class="">Level Up Price: <span id="daveLevelPrice">10</span> gold</p>
+            <p>Level Up Price: <span id="daveLevelPrice">10</span> gold</p>
 
             <button id="daveLevelButton" class=" border" onclick="levelDave('Dave')">Level Up:
               <span id="DaveLevel">0</span></button>
@@ -69,14 +69,14 @@
 
 
         <!-- ALCHEMIST, Zed -->
-        <div class="p-3 zed">
-          <strong>
+        <div class="zed text-light">
+          <strong class="fs-3">
             <p>Name: Zed</p>
             <p>Job: Alchemist</p>
 
             <p>Income: +<span id="zedIncome">0</span> gold/second</p>
 
-            <p class="">Level Up Price: <span id="zedLevelPrice">20</span> gold</p>
+            <p>Level Up Price: <span id="zedLevelPrice">20</span> gold</p>
 
             <button id="zedLevelButton" class=" border" onclick="levelZed('Zed')">Level Up:
               <span id="ZedLevel">0</span></button>
@@ -84,15 +84,15 @@
         </div>
 
 
-        <!-- MONSTER HUNTER, Mary -->
-        <div class="p-3 mary">
-          <strong>
-            <p>Name: Mary</p>
+        <!-- MONSTER HUNTER, Kain -->
+        <div class="kain text-light">
+          <strong class="fs-3">
+            <p>Name: Kain</p>
             <p>Job: Monster Hunter</p>
 
             <p>Income: +<span id="maryIncome">0 </span>gold/second</p>
 
-            <p class="">Level Up Price: <span id="maryLevelPrice">30</span> gold</p>
+            <p>Level Up Price: <span id="maryLevelPrice">30</span> gold</p>
 
             <button id="maryLevelButton" class=" border" onclick="levelMary('Mary')">Level Up:
               <span id="MaryLevel">0</span></button>
@@ -117,7 +117,7 @@
 
 
         <!-- witch -->
-        <div class="witch col-5">
+        <div class="witch col-6 fs-1">
           <img src="witch.png" alt="" class="img-fluid">
         </div>
       </div>
@@ -173,7 +173,7 @@
                 class="img-fluid goldcoin">
               <strong><span id="clickerUpgrade1">50</span></strong>
             </button>
-            <p id="clickUpgrade" class="text-light"><strong> Buy better ingredients (+1 gold/click)</strong></p>
+            <p id="clickUpgrade" class="text-light fs-5"><strong> Buy better ingredients (+1 gold/click)</strong></p>
           </div>
 
           <p></p>
@@ -183,7 +183,7 @@
                 class="img-fluid goldcoin">
               <strong><span id="clickerUpgrade2">100</span></strong>
             </button>
-            <p id="clickUpgrade2" class="text-light"><strong> Improve potion making equipment (Clicker is twice as
+            <p id="clickUpgrade2" class="text-light fs-5"><strong> Improve potion making equipment (Clicker is twice as
                 effective)</strong></p>
           </div>
         </div>
@@ -197,7 +197,7 @@
                 class="img-fluid goldcoin">
               <strong><span id="autoUpgradePrice1">200</span></strong>
             </button>
-            <p id="autoUpgrade" class="text-light"><strong> Train workers (+1 gold/second)</strong></p>
+            <p id="autoUpgrade" class="text-light fs-5"><strong> Train workers (+1 gold/second)</strong></p>
           </div>
 
           <p></p>
@@ -207,7 +207,8 @@
                 class="img-fluid goldcoin">
               <strong><span id="autoUpgradePrice2">500</span></strong>
             </button>
-            <p id="autoUpgrade2" class="text-light"><strong> Time warp (Double amount of passive income gained)</strong>
+            <p id="autoUpgrade2" class="text-light fs-5"><strong> Time warp (Double amount of passive income
+                gained)</strong>
             </p>
           </div>
 
