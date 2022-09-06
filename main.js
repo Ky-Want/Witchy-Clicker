@@ -166,4 +166,4 @@ function passiveIncome() {
 }
 
 
-setInterval(passiveIncome, 5000)
+setInterval(passiveIncome, 3000)
